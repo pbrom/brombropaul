@@ -1,0 +1,40 @@
+<div class="header-navigation">
+	<span class="logo-area"><svg class="icon icon-pb-white"></svg></span>
+	<ul>
+		<li><a href="#me">ME</a></li>
+		<li><a href="#recent-work">WORK</a></li>						
+		<li><a href="#workbench">BENCH</a></li>
+		<li><a href="#blog">BLOG</a></li>
+		<li><a href="#contact">CONTACT</a></li>
+	</ul>
+</div>
+<div class="rolling-square-container">
+	<div id="rolling-square-left"></div>
+	<div id="rolling-square-right"></div>
+</div>
+<div class="half-circle"></div>
+<div class="half-circle md"></div>
+<div class="half-circle sm"></div>
+<svg viewBox="0 0 600 300" class="svg-defs">
+	<symbol id="s-text">
+		<text text-anchor="middle" x="50%" y="50%" dy=".35em">						
+			<tspan class="text noselect myname" x="300" y="160">Paul Brom</tspan>           
+			<tspan class="cursive noselect mytitle" x="465" y="185">Front End Developer</tspan>
+		</text>
+	</symbol>
+	<mask id="m-text" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+		<rect width="100%" height="100%" class="mask__shape"></rect>
+		<use xlink:href="#s-text"class="mask__text"></use>
+	</mask>
+</svg>			
+<div class="box-with-text">
+	<div class="text-fill">
+		<div id="mesh-container">
+			<canvas id="wheel-canvas" width="100%" height="100%" style="display:block;"></canvas>
+		</div>
+	</div>
+	<svg viewBox="0 0 600 300" class="svg-inverted-mask">
+		<rect width="100%" height="100%" mask="url(#m-text)" class="shape--fill"/>
+		<use xlink:href="#s-text" class="text--transparent"></use>
+	</svg>
+</div>		

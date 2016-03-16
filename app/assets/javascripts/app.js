@@ -1,7 +1,8 @@
-//$( document ).ready(function() {
+// Wheel 
 
 var can = document.getElementById('wheel-canvas');
 con = can.getContext('2d');
+
 var DRAW_SPEED = 30;
 var WHEEL_SPEED = 120;
 var offsetLastSet = -1;
@@ -241,8 +242,8 @@ function resizeCanvas() {
 
 window.addEventListener('resize', resizeCanvas, false);
 resizeCanvas();
-var drawInterval = setInterval(draw, DRAW_SPEED);
 
+var drawInterval = setInterval(draw, DRAW_SPEED);
 var mouseX, mouseY, prevMouseX, prevMouseY;
 
 $('#mainheader').mousemove( function(event) {
@@ -252,6 +253,11 @@ $('#mainheader').mousemove( function(event) {
 	mouseY = event.clientY;	
 });
 
+// Brain Animation
+
+var bannerTimer = 0;
+var brainTimer = 0;
+var brianAnimationPlayed = false;
 function brainAnimation() {
 	if(brainTimer == 0) {
 		brianAnimationPlayed = true;
@@ -301,9 +307,8 @@ function brainAnimation() {
 	brainTimer++;
 }
 
-var bannerTimer = 0;
-var brainTimer = 0;
-var brianAnimationPlayed = false;
+
+// Scrolls
 window.onscroll = function() {
 	scrollPos = this.scrollY;
 	if(brianAnimationPlayed == false) { 
@@ -319,6 +324,7 @@ window.onscroll = function() {
 	}
 };
 
+// Hovers
 $('#about-me-img').hover( function() {
 		$(this).find('img').addClass('pull');
 		$(this).find('img').removeClass('release');
@@ -327,13 +333,17 @@ $('#about-me-img').hover( function() {
 		$(this).find('img').removeClass('pull');
    }
 );
-
 $('.email-me, .resume-me').hover(
 	function() { $(this).find('svg').toggleClass('icon-hover'); },
 	function() { $(this).find('svg').toggleClass('icon-hover'); }
 );
+var myList = $('#recent-work-wrapper').find('.work-grid');
+myList.on('mouseover', '.work-grid-element', function() {
+	$(this).siblings().removeClass('open');
+	$(this).addClass('open');
+});
 
-
+// Clicks
 $('a[href="#me"]').click(function(){
 	$('html, body').animate({scrollTop:$('#me').offset().top}, 1600);
 });
@@ -343,25 +353,22 @@ $('a[href="#recent-work"]').click(function(){
 $('a[href="#workbench"]').click(function(){
 	$('html, body').animate({scrollTop:$('#workshop-wrapper').offset().top}, 1600);
 });
+$('a[href="#blog"]').click(function(){
+	$('html, body').animate({scrollTop:$('#blog-wrapper').offset().top}, 1600);
+});
 $('a[href="#contact"]').click(function(){
 	$('html, body').animate({scrollTop:$('#contact').offset().top}, 1600);
 });
-
 $('.banner-container').click(function(){
 	$('html, body').animate({scrollTop:$('.banner-container').offset().top}, 1600);
 });
-
-
 $('a[href="#top"]').click(function(e){
 	e.preventDefault();
 	$('html, body').animate({scrollTop:0}, 1600);
 });
 
-var myList = $('#recent-work-wrapper').find('.work-grid');
-myList.on('mouseover', '.work-grid-element', function() {
-	$(this).siblings().removeClass('open');
-	$(this).addClass('open');
-});
+
+// Rolling Boxes
 
 var myBoxContainer =      $('.rolling-square-container');
 var leftBox =             $('#rolling-square-left');
@@ -451,5 +458,3 @@ rightBox.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', func
 		}
 	}
 });
-
-//});

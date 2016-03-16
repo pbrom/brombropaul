@@ -94,12 +94,16 @@ header{
 	display: block;
 	width: 347px;
 	margin:30px auto 0 auto;
-	
 	.logo-area {
 		display: block;
-		margin: 0px auto 10px auto;
+		margin: 0px 35% 10px;
 		width: 60px;
 		height: 60px;
+		transition: all 0.3s ease-in-out 0s;
+		&:hover {
+			transform: scale(1.05, 1.05);
+			transition: all 0.3s ease-in-out 0s;
+		}
 	}
 	ul {
 		padding:0;
@@ -801,6 +805,39 @@ p.element-desc > a:hover {
 	background-color:white;
 	transition: all 0.3s ease-in 0s;
 }
+
+
+/* Blog */
+#blog-wrapper {
+	margin-bottom: 90px;
+	padding: 30px 30px 10px 30px;
+	text-align: center;
+	#post-wrapper {
+		width: 700px;
+		display:block;
+		margin: 5px auto 15px auto;
+		text-align:left;
+		h1.title {
+			font-size: 1.8em;			
+			margin:0;
+		}
+		p {
+			margin: 0;
+			&.date {
+				font-size: .6em;
+			}
+			&.body {
+
+			}
+		}
+		.button {
+			margin-top: 5px;
+			padding: .3em 1.5em;
+			font-size: .6em;
+		}
+	}
+}
+
 
 /* Contact */
 

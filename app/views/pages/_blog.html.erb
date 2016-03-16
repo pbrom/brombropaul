@@ -1,0 +1,40 @@
+<div class="section-image" >
+	<%= image_tag "logo_pb_light.svg", width: "100px"%>
+</div>
+<h1 class="section-header">Blog</h1>
+<p>Here's my personal blog that I started recently.</p>
+
+<% Post.take(3).each do |p| %>
+	<div id="post-wrapper">
+		<h1 class="title">
+			<%= p.title %>
+		</h1>
+		<p class="date">
+			Posted <%= time_ago_in_words(p.created_at) %> Ago
+			<% if admin_signed_in? %>
+				| <%= link_to "Edit", edit_post_path(p) %>
+				| <%= link_to "Delete", post_path(p), method: :delete, data: {confirm: "Are You Sure?" } %>
+			<% end %>
+		</p>
+		<p class="body"> 
+			<% trunc = truncate p.body, :length   => 200, :separator => /\w/, :omission => '...' %>
+			<%= trunc %>
+		</p>
+		<% if trunc.length > 195 %>
+			<button class="button">
+				<%= link_to "View this full post", p %>
+			</button>
+		<% end %>
+		<button class="button">			
+			<%= link_to "Write a Comment", p %>
+		</button>
+	</div>	
+<% end %>
+<button class="button">
+	<%= link_to "View All Posts", posts_path %>
+</button>
+<% if admin_signed_in? %>
+	<button class="button">
+		<%= link_to "New Post", new_post_path %>
+	</button>
+<% end %>
