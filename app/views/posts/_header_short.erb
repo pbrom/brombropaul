@@ -1,6 +1,6 @@
 <div id="short-header">
 	<div class="header-navigation">
-		<span class="logo-area"><svg class="icon icon-pb-white"></svg></span>
+		<%= link_to content_tag(:span, content_tag(:svg, "", class:"icon icon-pb-white"), class:"logo-area"), root_path %>
 		<ul>
 			<li><%= link_to "ME", root_path(anchor: "me") %></li>
 			<li><%= link_to "WORK", root_path(anchor: "recent-work") %></li>						

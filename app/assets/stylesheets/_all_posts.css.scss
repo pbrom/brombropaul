@@ -1,6 +1,15 @@
 #short-header {
 	background-color: #0D282D;
 	padding-bottom: 20px;
+	.header-navigation {
+		a {
+			height:0px;
+			width:0px;
+		}
+		.logo-area {
+			margin-top: -20px;
+		}
+	}
 }
 
 .all-posts, .one-post  {
