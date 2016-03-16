@@ -1,23 +1,26 @@
-<div id="post_content">
-	<h1 class="title">
-		<%= @post.title %>
-	</h1>
-	<p class="date">
-		Sumbitted <%= time_ago_in_words(@post.created_at) %> Ago
-		<% if user_signed_in? %>
-			| <%= link_to "Edit", edit_post_path(@post) %>
-			| <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are You Sure?" } %>
-		<% end %>
-	</p>
-	<p class="body">
-		<%= @post.body %>
-	</p>
+<%= render 'header_short' %>
+<div class="one-post">
+	<div class="post_wrapper">
+		<h1 class="title">
+			<%= @post.title %>
+		</h1>
+		<p class="date">
+			Sumbitted <%= time_ago_in_words(@post.created_at) %> Ago
+			<% if user_signed_in? %>
+				| <%= link_to "Edit", edit_post_path(@post) %>
+				| <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are You Sure?" } %>
+			<% end %>
+		</p>
+		<p class="body">
+			<%= @post.body %>
+		</p>
 
-	<div id="comments">
-		<h2><%= @post.comments.count %> Comments</h2>
-		<%= render @post.comments %>
-		
-		<h3>Add a comment</h3>
-		<%= render 'comments/form' %>
+		<div id="comments">
+			<h2><%= @post.comments.count %> Comments</h2>
+			<%= render @post.comments %>
+
+			<h3>Add a comment</h3>
+			<%= render 'comments/form' %>
+		</div>
 	</div>
 </div>

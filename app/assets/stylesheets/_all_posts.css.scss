@@ -1,0 +1,35 @@
+#short-header {
+	background-color: #0D282D;
+	padding-bottom: 20px;
+}
+
+.all-posts, .one-post  {
+	padding: 10px 30px;
+	.post_wrapper{
+		display: block;
+		width: 700px;
+		margin: 25px auto;;
+		p {
+			margin:0;
+		}
+		.title {
+			margin:0 0 5px 0;
+		}
+		.date {
+			font-size: .8em;
+		}
+	}
+}
+
+.comment_content {
+	margin-bottom: 15px;
+	.comment_name {
+		
+	}
+	.comment_body {
+		
+	}
+	.comment_time {
+		font-size: .8em;
+	}
+}

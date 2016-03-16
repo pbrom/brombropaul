@@ -1,6 +1,14 @@
-<% @posts.each do |post| %>
-	<div class ="post_wrapper">
-		<h2 class="title"><%= link_to post.title, post %></h2>
-		<p class="date"><%= post.created_at.strftime("%b, %d, %Y") %></p>
-	</div>
-<% end %>
+<%= render 'header_short' %>
+<div class="all-posts" >
+	<% @posts.each do |post| %>
+		<div class ="post_wrapper">
+			<h1 class="title"><%= link_to post.title, post %></h2>
+			<p class="body"> 
+				<% truncated_body = truncate post.body, :length => 200, :separator => /\w/, :omission => '...' %>
+				<%= link_to truncated_body, post %>
+			</p>
+			<% time = post.created_at.strftime("%b, %d, %Y") %>
+			<p class="date"><%= link_to time, post %></p>
+		</div>
+	<% end %>
+</div>
