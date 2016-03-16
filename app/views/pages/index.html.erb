@@ -1,0 +1,183 @@
+<header id="mainheader">
+	<div class="header-navigation">
+		<span class="logo-area"><svg class="icon icon-pb-white"></svg></span>
+		<ul>
+			<li><a href="#me">ME</a></li>
+			<li><a href="#recent-work">WORK</a></li>						
+			<li><a href="#workbench">BENCH</a></li>
+			<li><%= link_to "BLOG", posts_path%></li>
+			<li><a href="#contact">CONTACT</a></li>
+		</ul>
+	</div>
+	<div class="rolling-square-container">
+		<div id="rolling-square-left"></div>
+		<div id="rolling-square-right"></div>
+	</div>
+	<div class="half-circle"></div>
+	<div class="half-circle md"></div>
+	<div class="half-circle sm"></div>
+	<svg viewBox="0 0 600 300" class="svg-defs">
+		<symbol id="s-text">
+			<text text-anchor="middle" x="50%" y="50%" dy=".35em">						
+				<tspan class="text noselect myname" x="300" y="160">Paul Brom</tspan>           
+				<tspan class="cursive noselect mytitle" x="465" y="185">Front End Developer</tspan>
+			</text>
+		</symbol>
+		<mask id="m-text" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+			<rect width="100%" height="100%" class="mask__shape"></rect>
+			<use xlink:href="#s-text"class="mask__text"></use>
+		</mask>
+	</svg>			
+	<div class="box-with-text">
+		<div class="text-fill">
+			<div id="mesh-container">
+				<canvas id="wheel-canvas" width="100%" height="100%" style="display:block;"></canvas>
+			</div>
+		</div>
+		<svg viewBox="0 0 600 300" class="svg-inverted-mask">
+			<rect width="100%" height="100%" mask="url(#m-text)" class="shape--fill"/>
+			<use xlink:href="#s-text" class="text--transparent"></use>
+		</svg>
+	</div>			
+</header>
+<section id="main-wrapper">
+	<a id="scroll-to-top" href="#top">&uarr;</a>
+	<div id="me">
+		<div id="brain">
+			<div class="brain-half brain-right"></div>
+			<div class="brain-half brain-left"></div>
+		</div>
+		<div id="circle-group">
+			<div id="banner-circle-1" class="circle"></div>
+			<div id="banner-circle-2" class="circle"></div>
+			<div id="banner-circle-3" class="circle"></div>
+		</div>
+		<div id="about-me-desc">
+			<a href="mailto:brombropaul@gmail.com?subject=Hello!" target="_top" class="speech-border">
+				<p>Message Me</p>
+			</a>
+			<div id="about-me-img" >
+				<%= image_tag "dude.png", width: "50px", height: "121px" %>					
+			</div>
+			<h1 class="section-header">About me</h1>
+			<p>I'm an artsy jack-of-all-trades programmer from Chicago, IL.</p>
+			<p>I like videogames, cooking, coffee and squats.</p>
+			<br>
+		</div>				
+		<br>				
+		<div class="all-banners">
+			<div class="banner-container">
+				<div id="banner-circle-1" class="circle"></div>
+				<div class="banner" id="banner1">
+					<h2>Design!</h2>
+					<div class="banner-content">
+						<span>I create simple, clean and professional pages, using modern design, smart typography and handmade graphics.</span>
+					</div>
+				</div>						
+			</div>
+			<div class="banner-container">
+				<div id="banner-circle-2" class="circle"></div>
+				<div class="banner" id="banner2">
+					<h2>Front End!</h2>
+					<div class="banner-content">
+						<span>User exerience is paramount. I will develop your website or application using the latest technologies available to be equally majestic across all devices.</span>
+					</div>
+				</div>
+			</div>
+			<div class="banner-container">
+				<div id="banner-circle-3" class="circle"></div>
+				<div class="banner" id="banner3">
+					<h2>Software!</h2>
+					<div class="banner-content">
+						<span>I love the entire development cycle. Brainstorming, designing, protoyping, coding, debugging... there's nothing quite like it. Let's build something together!</span>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</div>	
+	<div id="recent-work-wrapper">
+		<div class="section-image" >
+			<%= image_tag "coffee.svg", width: "100px"%>
+		</div>
+		<h1 class="section-header">Recent Work</h1>
+		<p>Some recent websites and other projects.</p>
+		<ul class="work-grid">
+			<li class="work-grid-element open">		
+				<%= image_tag "rbc_screen.png", width: "650px"%>
+				<div class="element-banner">
+					<svg class="icon icon-carrot-up carrot"></svg>
+					<h2>RBClassics</h2>
+					<p class="element-desc"><a href="https://www.rbclassics.com" target="_blank">Visit the site</a>&nbsp;&nbsp;A small, stylish ecommerce website built using the osCommerce Online Merchant 2.4 framework.</p>
+				</div>
+
+			</li>
+			<li class="work-grid-element">
+				<%= image_tag "gff_screen.png", width: "650px"%>
+				<div class="element-banner">
+					<svg class="icon icon-carrot-up carrot"></svg>
+					<h2>Global Food Forums</h2>
+					<p class="element-desc"><a href="http://www.globalfoodforums.com/store-testing-page" target="_blank">Visit the page</a>&nbsp;&nbsp;Wordpress plugin that pops up a form, collects information, then sends an email with dynamic content.</p>
+				</div>
+			</li>
+			<li class="work-grid-element">
+				<%= image_tag "ss_screen.png", width: "650px"%>
+				<div class="element-banner">
+					<svg class="icon icon-carrot-up carrot"></svg>
+					<h2>Signature Slots</h2>
+					<p class="element-desc"><a href="http://www.signatureslots.com" target="_blank">Visit the site</a>&nbsp;&nbsp;A NodeJS application that allows private users to review iterations of work in progress.</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div id="workshop-wrapper">
+		<div class="section-image" >
+			<%= image_tag "bottle.svg", width: "100px"%>
+		</div>
+		<h1 class="section-header">Workbench</h1>
+		<p>A collection of some fun experiments from my <a href="http://codepen.io/brombropaul/" >Codepen</a> profile.</p>
+		<div class="work-grid">
+			<div class="work-grid-element open">
+				<p data-height="425" data-theme-id="0" data-slug-hash="NNWwLg" data-default-tab="result" data-user="brombropaul" class="codepen">See the Pen <a href="http://codepen.io/brombropaul/pen/NNWwLg/">Finn Pain Scale</a> by Paul (<a href="http://codepen.io/brombropaul">@brombropaul</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+				<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>						
+			</div>
+			<div class="work-grid-element open">
+				<p data-height="439" data-theme-id="0" data-slug-hash="LNGjEr" data-default-tab="result" data-user="brombropaul" class="codepen">See the Pen <a href="http://codepen.io/brombropaul/pen/LNGjEr/">Wheel</a> by Paul (<a href="http://codepen.io/brombropaul">@brombropaul</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+				<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+			</div>
+		</div>
+	</div>
+	<div class="footer" id="contact">				
+		<div class="section-image icon-pb" >
+			<%= image_tag "logo_pb_light.svg", width: "100px"%>
+		</div>
+		<h1 class="section-header">I Can Help</h1>
+		<p></p>				
+		<p>Whether you're ready to tackle your dream project, or just need some help building a neat little website, I would love to make it happen.</p>
+		<p>Get in touch with me if you'd like my help, or if you think I'd be a good fit at your company.</p>				
+		<div id="contact-wrapper">
+			<a href="mailto:brombropaul@gmail.com?subject=Hello!" target="_top" class="email-me">
+				<svg class="icon icon-email"></svg> Message Me
+			</a>
+			<a href="img/BromPaul_Resume.pdf" download="BromPaul_Resume" class="email-me">
+				<svg class="icon icon-down"></svg> My Resume
+			</a>
+		</div>
+		<div class="row centered social">
+			<a href="http://codepen.io/brombropaul" target="_blank">
+				<svg class="icon icon-codepen-white"></svg>
+			</a>
+			&#8226;
+			<a href="https://www.linkedin.com/in/paul-brom-47929982" target="_blank">
+				<svg class="icon icon-linkedin-white"></svg>
+			</a>
+			&#8226;
+			<a href="mailto:brombropaul@gmail.com?subject=Hello!" target="_blank">
+				<svg class="icon icon-social-email-white"></svg>
+			</a>
+		</div>				
+		<div class="row centered footer-txt">
+			<span>Copyright &#169;2016 Paul Brom. All rights reserved.</span>
+		</div>
+	</div>		
+</section>
+<%= javascript_include_tag 'app', 'data-turbolinks-track' => true %>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 512 512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r"
+   sodipodi:docname="icon_email_blue.svg">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>HTML5 Logo Badge</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="716"
+     id="namedview14"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="-99.59915"
+     inkscape:cy="284.76212"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <title
+     id="title4">HTML5 Logo Badge</title>
+  <path
+     id="rect4186"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#3a6a6d;stroke-width:40;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 481.12316,136.07363 -120.0084,120.00841 -79.52014,79.52012 c -14.20616,14.20615 -37.07958,14.20614 -51.28576,0 L 151.54353,256.8371 30.780323,136.07363 M 362.36361,266.92137 481.12315,385.6809 M 30.780322,385.68089 149.5396,266.92161 m -84.862033,-163.76426 382.548343,0 c 19.53246,0 35.25717,15.7247 35.25717,35.25717 l 0,244.18787 c 0,19.53247 -15.72471,35.25716 -35.25717,35.25716 l -382.548343,0 c -19.532471,0 -35.257167,-15.72469 -35.257167,-35.25716 l 0,-244.18787 c 0,-19.53247 15.724696,-35.25717 35.257167,-35.25717 z"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccssccccccsssssssss" />
+</svg>

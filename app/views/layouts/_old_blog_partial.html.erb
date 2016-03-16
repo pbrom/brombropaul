@@ -1,0 +1,43 @@
+<%# <div id="sidebar">
+		<div id="logo">
+			<%= link_to root_path do %>
+				<%= image_tag "logo.svg"%>
+			<% end %>
+		</div>
+		<ul>
+			<li class="category">Website</li>
+			<li><%= link_to "Blog", root_path %></li>
+			<li><%= link_to "About", about_path%></li>
+		</ul>
+		<ul>
+			<li class="category">Social</li>
+			<li><a href="http://www.google.com">Goog</a></li>
+			<li><a href="http://www.google.com">Goog</a></li>
+			<li><a href="http://www.google.com">Goog</a></li>
+			<li><a href="http://www.google.com">Goog</a></li>			
+		</ul>
+		<% if !admin_signed_in? %>
+			<p class="sign_in"><%= link_to "Admin Login", new_admin_session_path %></p>
+		<% end %>
+	</div>
+	<div id="main_content">	
+		<div id="header">
+			<% if current_page?(root_path) %>
+				<p>All Posts</p>
+			<% elsif current_page?(about_path) %>
+				<p>About</p>
+			<% else %>
+				<%= link_to "Back to All Posts", root_path %>
+			<% end %>
+			<% if admin_signed_in? %>
+				<div class="buttons">
+					<button class="button"><%= link_to "New Post", new_post_path %></button>
+					<button class="button"><%= link_to "Log Out", destroy_admin_session_path, method: :delete %></button>
+				</div>
+			<% end %>
+		</div>
+		<% flash.each do |name, msg| %>
+			<%= content_tag(:div, msg, class: "alert") %>
+		<% end %>
+		
+	</div> %>
