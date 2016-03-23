@@ -373,7 +373,15 @@ $('a[href="#top"]').click(function(e){
 	$('html, body').animate({scrollTop:0}, 1600);
 });
 
-
+$('#mc-embedded-subscribe').click(function(e){
+	e.preventDefault();
+	var myEmail = "brombropaul@gmail.com";
+	var mySubject = "Hey Paul!";
+	//var email = $('#mce-EMAIL').val();
+	var name = $('#mce-NAME').val();
+	var message = $('#mce-MESSAGE').val();
+	window.open('mailto:'+myEmail+'?subject='+mySubject+'&body='+message+'\n\n- '+name);
+});
 
 // Rolling Boxes
 

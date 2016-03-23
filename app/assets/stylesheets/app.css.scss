@@ -811,7 +811,7 @@ p.element-desc > a:hover {
 
 /* Blog */
 #blog-wrapper {
-	margin-bottom: 160px;
+	margin-bottom: 150px;
 	padding: 30px 30px 10px 30px;
 	text-align: center;
 	#post-wrapper {
@@ -900,7 +900,7 @@ p.element-desc > a:hover {
 
 .footer > .social {
 	color:#f2f2f2;
-	margin: 60px auto 20px auto;
+	margin: 30px auto 20px auto;
 	text-decoration: none;
 	//border-top: solid 1px white;
 	padding: 20px 50px 0px 50px;
@@ -1058,6 +1058,7 @@ p.element-desc > a:hover {
 .icon-pb-white {
 	width: 60px;
 	height: 60px;
+	image-rendering: pixelated;
 	background: image-url('logo_pb_light.svg');
 	background-size:100%;
 	background-repeat: no-repeat;
