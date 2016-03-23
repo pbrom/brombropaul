@@ -646,7 +646,7 @@ header{
 		p {
 			color:#f2f2f2;
 		}
-		&:before {
+		/*&:before {
 			opacity:0;
 			transition: all 0.6s ease-in-out 0s;
 		}
@@ -659,7 +659,7 @@ header{
 				opacity:0;
 				transition: all 0.6s ease-in-out 0s;
 			}
-		}
+		}*/
 	}
 	&:before {
 		content:"";
@@ -679,7 +679,7 @@ header{
 		display:block;
 		transition: all 0.6s ease-in-out 0s;
 	}
-	&:after {
+	/*&:after {
 		content:"";
 		position:absolute;
 		z-index:10;
@@ -708,7 +708,7 @@ header{
 			background:#fff;
 			transition: all 0.6s ease-in-out 0s;
 		}
-	}
+	}*/
 }
 
 
@@ -811,7 +811,7 @@ p.element-desc > a:hover {
 
 /* Blog */
 #blog-wrapper {
-	margin-bottom: 90px;
+	margin-bottom: 160px;
 	padding: 30px 30px 10px 30px;
 	text-align: center;
 	#post-wrapper {
@@ -871,8 +871,8 @@ p.element-desc > a:hover {
 	}
 }
 
-#contact-wrapper {
-	margin: 50px auto;	
+.contact-wrapper {
+	margin: 20px auto 20px auto;
 }
 
 .email-me {
@@ -882,7 +882,7 @@ p.element-desc > a:hover {
 	margin: 10px auto 10px auto;
 	background-color: #0D282D;
 	border-radius: 25px;
-	padding:10px 25px 15px 25px;
+	padding:15px 15px 15px 15px;
 	border: 1px solid #f2f2f2;
 	text-decoration: none;
 	color:#f2f2f2;
@@ -893,15 +893,16 @@ p.element-desc > a:hover {
 	&:hover {
 		background-color: #3A6A6D;
 		color:#f2f2f2;
+		border: 1px solid rgba(250,250,250,0);
 		transition: all 0.3s ease-in-out 0s;
 	}
 }
 
 .footer > .social {
 	color:#f2f2f2;
-	margin: 10px auto 20px auto;
+	margin: 60px auto 20px auto;
 	text-decoration: none;
-	border-top: solid 1px white;
+	//border-top: solid 1px white;
 	padding: 20px 50px 0px 50px;
 	display: inline-block;
 }
@@ -929,6 +930,31 @@ p.element-desc > a:hover {
 	transition: opacity 0.3s ease-in-out 0s;
 }
 
+.footer-text {
+	margin:0 auto 0 auto;
+	display:block;
+	width: 700px;
+}
+
+#mc_embed_signup {
+	background-color:#0D282D;
+	display:block; 
+	margin:0 auto 50px auto;
+	
+}
+
+#mce-MESSAGE, #mce-NAME, #mce-EMAIL {
+    color:#333;
+}
+
+.footer form {
+	background-color:#0D282D;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+	background-color:#0D282D;
+	margin-bottom: 0;
+}
 
 
 /* Icons */
