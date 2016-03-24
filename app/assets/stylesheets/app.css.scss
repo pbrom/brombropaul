@@ -55,8 +55,9 @@ p {
 
 @keyframes rubberBandRelease {
 	0% {transform: scaleX(1.4) scaleY(.4);}
-	30% {transform: scaleX(0.75) scaleY(1.25);}
-	60% {transform: scaleX(1.15) scaleY(0.85);}
+	25% {transform: scaleX(0.75) scaleY(1.25);}
+	50% {transform: scaleX(1.15) scaleY(0.85);}
+	75% {transform: scaleX(.95) scaleY(1.05);}
 	100% {transform: scale(1);}
 }
 
@@ -442,7 +443,7 @@ header{
 	img {
 		transform-origin: 40% 100%;
 		&.release {
-			animation-duration: 1s;
+			animation-duration: 1.25s;
 			animation-fill-mode: both;
 			animation-iteration-count: 1;
 			animation-name: rubberBandRelease;
@@ -471,6 +472,7 @@ header{
 	height: 500px;
 	width: 220px;
 	.banner {
+		text-align:center;
 		width:100%;
 		opacity:0;
 		padding:20px 20px;
@@ -719,7 +721,8 @@ header{
 	text-align: center;
 }
 
-.work-grid {		
+.work-grid {	
+	margin-top: 20px;
 	border: solid 10px #0D282D;
 	display:inline-flex;
 	flex-wrap:wrap;
@@ -903,7 +906,7 @@ p.element-desc > a:hover {
 	margin: 30px auto 20px auto;
 	text-decoration: none;
 	//border-top: solid 1px white;
-	padding: 20px 50px 0px 50px;
+	padding: 0px 40px 0px 50px;
 	display: inline-block;
 }
 
