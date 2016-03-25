@@ -311,10 +311,11 @@ function brainAnimation() {
 // Scrolls
 window.onscroll = function() {
 	scrollPos = this.scrollY;
+	//clearScrollQueue();
 	if(brianAnimationPlayed == false) { 
 		if(scrollPos > 550) {
-			setInterval(brainAnimation, 30);
-			
+			brianAnimationPlayed = true;
+			setInterval(brainAnimation, 30);			
 		}
 	}
 	if(scrollPos > $('#mainheader').height() ){
@@ -343,34 +344,38 @@ myList.on('mouseover', '.work-grid-element', function() {
 	$(this).addClass('open');
 });
 
+function clearScrollQueue() {
+	$('html, body').stop();
+}
+
 // Clicks
 $('a[href="#me"]').click(function(e){
 	e.preventDefault();
-	$('html, body').animate({scrollTop:$('#me').offset().top}, 1600);
+	$('html, body').animate({scrollTop:$('#me').offset().top}, 1600, clearScrollQueue);
 });
 $('a[href="#recent-work"]').click(function(e){
 	e.preventDefault();
-	$('html, body').animate({scrollTop:$('#recent-work-wrapper').offset().top}, 1600);
+	$('html, body').animate({scrollTop:$('#recent-work-wrapper').offset().top}, 1600, clearScrollQueue);
 });
 $('a[href="#workbench"]').click(function(e){
 	e.preventDefault();
-	$('html, body').animate({scrollTop:$('#workshop-wrapper').offset().top}, 1600);
+	$('html, body').animate({scrollTop:$('#workshop-wrapper').offset().top}, 1600, clearScrollQueue);
 });
 $('a[href="#blog"]').click(function(e){
 	e.preventDefault();
-	$('html, body').animate({scrollTop:$('#blog-wrapper').offset().top}, 1600);
+	$('html, body').animate({scrollTop:$('#blog-wrapper').offset().top}, 1600, clearScrollQueue);
 });
 $('a[href="#contact"]').click(function(e){
 	e.preventDefault();
-	$('html, body').animate({scrollTop:$('#contact').offset().top}, 1600);
+	$('html, body').animate({scrollTop:$('#contact').offset().top}, 1600, clearScrollQueue);
 });
 $('.banner-container').click(function(e){
 	e.preventDefault();
-	$('html, body').animate({scrollTop:$('.banner-container').offset().top}, 1600);
+	$('html, body').animate({scrollTop:$('.banner-container').offset().top}, 1600, clearScrollQueue);
 });
 $('a[href="#top"]').click(function(e){
 	e.preventDefault();
-	$('html, body').animate({scrollTop:0}, 1600);
+	$('html, body').animate({scrollTop:0}, 1600, clearScrollQueue);
 });
 
 $('#mc-embedded-subscribe').click(function(e){
