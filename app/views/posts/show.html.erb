@@ -11,6 +11,7 @@
 				| <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are You Sure?" } %>
 			<% end %>
 		</p>
+		<br>
 		<div class="body">
 			<%= @post.body.html_safe %>
 		</div>
