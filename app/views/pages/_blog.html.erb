@@ -17,10 +17,10 @@
 			<% end %>
 		</p>
 		<p class="body"> 
-			<% trunc = truncate p.body, :length   => 200, :separator => /\w/, :omission => '...' %>
-			<%= trunc %>
+			<% truncated_body = p.body.truncate_words(20, separator: ' ', omission: '....') %>
+			<%= strip_tags(truncated_body) %>
 		</p>
-		<% if trunc.length > 195 %>
+		<% if truncated_body.split.size <= 20 && p.body.split.size > 20 %>
 			<button class="button">
 				<%= link_to "View this full post", p %>
 			</button>

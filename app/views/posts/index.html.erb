@@ -4,7 +4,7 @@
 		<div class ="post_wrapper">
 			<h1 class="title"><%= link_to post.title, post %></h2>
 			<p class="body"> 
-				<% truncated_body = truncate post.body, :length => 200, :separator => /\w/, :omission => '...' %>
+				<% truncated_body = post.body.truncate_words(20, separator: ' ', omission: '....') %>
 				<%= link_to strip_tags(truncated_body), post %>
 			</p>
 			<% time = post.created_at.strftime("%b, %d, %Y") %>
