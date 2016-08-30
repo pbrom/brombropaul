@@ -14,8 +14,8 @@ var wowText = "Wow!";
 var canvasPosition = $(can).offset();
 var scrollPos = $(window)[0].scrollY;
 
-var circleCenterX = .725;
-var circleCenterY = .435;
+var circleCenterX = .715;
+var circleCenterY = .445;
 
 var wheelColor_01 = 'rgb(039,083,086)';
 var wheelColor_02 = 'rgb(071,130,135)';
