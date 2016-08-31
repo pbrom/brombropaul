@@ -14,7 +14,7 @@ var wowText = "Wow!";
 var canvasPosition = $(can).offset();
 var scrollPos = $(window)[0].scrollY;
 
-var circleCenterX = .715;
+var circleCenterX = .710;
 var circleCenterY = .445;
 
 var wheelColor_01 = 'rgb(039,083,086)';
@@ -142,7 +142,7 @@ function showWow() {
 	else if(score >= 20) {
 		wowText = "WTF?!";
 	}
-	$("#mainheader").append('<div class="cursive wheel-nice noselect">'+wowText+'</div>');
+	$("#mainheader").append('<div class="wheel-nice noselect">'+wowText+'</div>');
 	setTimeout(removeTempElement, 2300);
 	if($('#scoreContainer').length == 0) {
 		$("#mainheader").append('<div id="scoreContainer" class="cursive wheel-score noselect">+1</div>');
